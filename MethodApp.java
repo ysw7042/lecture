@@ -6,8 +6,8 @@ public class MethodApp {
 	//JVM에 의해 자동 호출되는 메소드
 	public static void main(String[] args) {
 		//객체(인스턴스:Instance)를 생성하여 참조변수에 저장
-		//형식) 클래스명 참조변수=new 클래스명()
-		// => 동일 패키지의 클래스는 패키지 표현 없이 클래스명만 표현하여 사용 가능 
+		//형식) 클래스명 참조변수=new 클래스명();
+		// => 동일 패키지의 클래스는 패키지 없이 클래스명만 표현하여 사용 가능 
 		// => new 클래스명() : new 연산자로 클래스의 생성자(Constructor)를 호출하여 객체 생성
 		// => 클래스명 참조변수 : 클래스로 생성된 객체의 정보를 저장하기 위한 참조변수 생성
 		// => 참조변수를 이용하여 저장된 객체의 필드 또는 메소드에 접근하여 사용
@@ -59,30 +59,6 @@ public class MethodApp {
 		} else {
 			System.out.println("매개변수에 전달된 값은 [홀수]입니다.");
 		}
-		System.out.println("=========================================================");
-		String nameResult=method.nameHello("홍길동");
-		System.out.println(nameResult);
-		System.out.println(method.nameHello("임꺽정"));
-		System.out.println("=========================================================");
-		//메소드를 호출하여 반환된 배열을 참조변수 저장 
-		int[] num=method.returnArray();
-		System.out.print("반환된 요소값 >> ");
-		for(int temp:num) {
-			System.out.print(temp+" ");
-		}
-		System.out.println();
-		System.out.println("=========================================================");
-		System.out.println("합계 = "+method.sumOne(10, 20, 30));
-		//메소드의 매개변수에 값이 정상적으로 전달되지 않은 경우 메소드 호출 에러 발생
-		//System.out.println("합계 = "+method.sumOne(10, 20, 30, 40, 50));
-		System.out.println("=========================================================");
-		//System.out.println("합계 = "+method.sumTwo({10,20,30}));//에러
-		System.out.println("합계 = "+method.sumTwo(new int[] {10,20,30}));
-		System.out.println("합계 = "+method.sumTwo(new int[] {10,20,30,40,50}));
-		System.out.println("=========================================================");
-		System.out.println("합계 = "+method.sumThree());
-		System.out.println("합계 = "+method.sumThree(10,20,30));
-		System.out.println("합계 = "+method.sumThree(10,20,30,40,50));
 		System.out.println("=========================================================");
 	}
 }
